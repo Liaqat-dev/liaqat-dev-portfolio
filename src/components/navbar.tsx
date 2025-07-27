@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import {useState, useEffect} from 'react';
+import {FiMenu, FiX} from 'react-icons/fi';
 
 const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    {name: 'Home', href: '#home'},
+    {name: 'Skills', href: '#skills'},
+    {name: 'Projects', href: '#projects'},
+    {name: 'Contact', href: '#contact'},
 ];
 
 export default function Navbar() {
@@ -18,7 +18,8 @@ export default function Navbar() {
         const handleScroll = () => {
             const scrollPos = window.scrollY + 120;
             for (const item of navItems) {
-                const section = document.querySelector(item.href);
+                const section = document.querySelector(item.href) as HTMLElement | null;
+
                 if (
                     section &&
                     section.offsetTop <= scrollPos &&
@@ -71,13 +72,14 @@ export default function Navbar() {
                     className="md:hidden text-white text-2xl"
                     onClick={() => setIsMobileOpen(!isMobileOpen)}
                 >
-                    {isMobileOpen ? <FiX /> : <FiMenu />}
+                    {isMobileOpen ? <FiX/> : <FiMenu/>}
                 </button>
             </div>
 
             {/* Mobile Menu */}
             {isMobileOpen && (
-                <div className="md:hidden bg-black bg-opacity-90 backdrop-blur-lg absolute top-16 left-0 w-full h-[calc(100vh-4rem)] flex flex-col items-center justify-center space-y-6 text-lg font-medium">
+                <div
+                    className="md:hidden bg-black bg-opacity-90 backdrop-blur-lg absolute top-16 left-0 w-full h-[calc(100vh-4rem)] flex flex-col items-center justify-center space-y-6 text-lg font-medium">
                     {navItems.map((item) => (
                         <a
                             key={item.href}
