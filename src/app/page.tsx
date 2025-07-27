@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <>
             <Navbar/>
-            <main className="w-screen mx-auto px-6">
+            <main className="w-screen mx-auto ">
                 <section id="home"><Hero/></section>
                 <section id="skills"><Skills/></section>
                 <section id="projects"><Projects/></section>
