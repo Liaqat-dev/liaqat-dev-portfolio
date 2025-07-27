@@ -35,7 +35,7 @@ export default function Hero() {
                 >
                     Passionate about building fast, clean, and scalable web applications.
                     I specialize in Node.js, React, and MongoDB, blending functionality with
-                    elegant UI. Let's build something remarkable.
+                    elegant UI. Let&apos;s build something remarkable.
                 </motion.p>
 
                 <motion.div

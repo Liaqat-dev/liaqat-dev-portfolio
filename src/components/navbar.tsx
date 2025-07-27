@@ -17,7 +17,7 @@ export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPos = window.scrollY + 120;
-            for (let item of navItems) {
+            for (const item of navItems) {
                 const section = document.querySelector(item.href);
                 if (
                     section &&
