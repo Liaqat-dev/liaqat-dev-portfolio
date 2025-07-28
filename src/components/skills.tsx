@@ -24,7 +24,7 @@ export default function Skills() {
                             <motion.div
                                 key={i}
                                 whileHover={{scale: 1.05}}
-                                className="flex gap-2 align-middle items-center justify-center bg-gradient-to-tr from-gray-800 to-gray-900 border border-blue-600/20 rounded-xl px-4 py-6 text-sm sm:text-base font-medium text-blue-200 hover:border-blue-500 transition"
+                                className="select-none flex gap-2 align-middle items-center justify-center bg-gradient-to-tr from-gray-800 to-gray-900 border border-blue-600/20 rounded-xl px-4 py-6 text-sm sm:text-base font-medium text-blue-200 hover:border-blue-500 transition"
                             >
                                 <Icon size={28} style={{color: skill.color}}/>
                                 {skill.name}

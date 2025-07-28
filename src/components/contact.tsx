@@ -14,7 +14,7 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="min-h-screen w-screen py-24 bg-black text-white flex items-center"
+            className="min-h-screen  py-24 bg-black text-white flex items-center"
         >
             <motion.div
                 initial={{opacity: 0, y: 30}}
