@@ -8,19 +8,19 @@ import {
     FaMapMarkerAlt,
     FaRegClock,
 } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 export default function Contact() {
     return (
         <section
             id="contact"
-            className="min-h-screen py-24 bg-black text-white flex items-center"
+            className="min-h-screen w-screen py-24 bg-black text-white flex items-center"
         >
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6}}
+                viewport={{once: true}}
                 className="max-w-3xl mx-auto px-4 text-center"
             >
                 <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500">
@@ -39,7 +39,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="hover:scale-125 transition hover:opacity-80"
                     >
-                        <FaWhatsapp className="text-green-500" />
+                        <FaWhatsapp className="text-green-500"/>
                     </a>
                     <a
                         href="https://instagram.com/liaqat_ali6143"
@@ -47,7 +47,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="hover:scale-125 transition hover:opacity-80"
                     >
-                        <FaInstagram className="text-pink-500" />
+                        <FaInstagram className="text-pink-500"/>
                     </a>
                     <a
                         href="https://github.com/liaqat-dev"
@@ -55,7 +55,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="hover:scale-125 transition hover:opacity-80"
                     >
-                        <FaGithub className="text-white" />
+                        <FaGithub className="text-white"/>
                     </a>
                     <a
                         href="https://linkedin.com/in/dev-liaqat-ali"
@@ -63,7 +63,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="hover:scale-125 transition hover:opacity-80"
                     >
-                        <FaLinkedin className="text-blue-500" />
+                        <FaLinkedin className="text-blue-500"/>
                     </a>
                 </div>
 
@@ -77,15 +77,15 @@ export default function Contact() {
                     </a>
                 </p>
 
-                <div className="flex justify-center gap-6 text-sm text-gray-400 mt-4">
-          <span className="flex items-center gap-2">
-            <FaMapMarkerAlt className="text-red-400" />
-            Based in Pakistan
-          </span>
+                <div className="flex max-sm:flex-col items-center justify-center  gap-6 text-sm mx-auto text-gray-400 mt-4">
+                      <span className="flex items-center gap-2">
+                        <FaMapMarkerAlt className="text-red-400"/>
+                        Based in Pakistan
+                      </span>
                     <span className="flex items-center gap-2">
-            <FaRegClock className="text-yellow-400" />
-            Available: Full-time / Freelance
-          </span>
+                        <FaRegClock className="text-yellow-400"/>
+                        Available: Full-time / Freelance
+                      </span>
                 </div>
 
                 <blockquote className="mt-10 italic text-gray-500 text-sm sm:text-base">

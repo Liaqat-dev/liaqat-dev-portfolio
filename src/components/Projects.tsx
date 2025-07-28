@@ -2,6 +2,7 @@
 
 import {resume} from '@/data/resume';
 import {motion} from 'framer-motion';
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Projects() {
     return (
@@ -19,23 +20,7 @@ export default function Projects() {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                     {resume.projects.map((project, i) => (
-                        <motion.a
-                            key={i}
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{scale: 1.02}}
-                            whileTap={{scale: 0.98}}
-                            className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-500 rounded-xl p-6 text-left transition-shadow duration-300 shadow hover:shadow-blue-500/30"
-                        >
-                            <h3 className="text-xl font-semibold text-blue-400 mb-2">
-                                {project.name}
-                            </h3>
-                            <p className="text-gray-300 text-sm">{project.description}</p>
-                            <span className="inline-block mt-4 text-sm text-blue-500 hover:underline">
-                View Project →
-              </span>
-                        </motion.a>
+                        <ProjectCard key={project.link} Project={project}/>
                     ))}
                 </div>
             </motion.div>
