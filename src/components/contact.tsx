@@ -9,6 +9,7 @@ import {
     FaRegClock,
 } from 'react-icons/fa';
 import {motion} from 'framer-motion';
+import { MdEmail } from "react-icons/md";
 
 export default function Contact() {
     return (
@@ -67,16 +68,20 @@ export default function Contact() {
                     </a>
                 </div>
 
-                <p className="text-gray-400 mb-3 text-sm">
-                    Email:{' '}
-                    <a
-                        href="mailto:liaqatdev6143@gmail.com"
-                        className="underline hover:text-blue-400"
-                    >
-                        dev.liaqat13@gmail.com
-                    </a>
-                </p>
-
+                <motion.div
+                    initial={{opacity: 0, y: 10}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.6, delay: 0.6}}
+                    className="mt-8 flex justify-center gap-4 flex-wrap"
+                >
+                        <a
+                            href="mailto:dev.liaqat13@gmail.com"
+                            className="flex flex-row gap-2 items-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-lg transition mx-auto"
+                        >
+                            <MdEmail size={25} />
+                            Send Message
+                        </a>
+                </motion.div>
                 <div className="flex max-sm:flex-col items-center justify-center  gap-6 text-sm mx-auto text-gray-400 mt-4">
                       <span className="flex items-center gap-2">
                         <FaMapMarkerAlt className="text-red-400"/>
